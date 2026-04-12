@@ -54,9 +54,6 @@ Pygame renders on a single surface, lacking native support for structural partit
 ## 3. Source Code Architecture
 
 ```text
-## 3. Source Code Architecture
-
-```text
 FlappyBird-AI-EvoLab/
 ├── main.py                  # Entry point — GUI initialization & Multithreading setup
 ├── config.py                # Global system constants & algorithmic hyperparameters
