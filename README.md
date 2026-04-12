@@ -166,7 +166,7 @@ INPUT (4 nodes)          HIDDEN (5 nodes)         OUTPUT (1 node)
 | **B1** | 1×5 = 5 biases | Hidden Layer Biases |
 | **W2** | 5×1 = 5 weights | Weight Matrix (Hidden -> Output) |
 | **B2** | 1×1 = 1 bias | Output Layer Bias |
-| **Tổng** | **31 parameters** | Optimized via Genetic Algorithm |
+| **Total** | **31 parameters** | Optimized via Genetic Algorithm |
 
 **Activation Function:**
 - **ReLU** (Hidden): `f(x) = max(0, x)` — Eliminates negative values, helping the network learn faster
