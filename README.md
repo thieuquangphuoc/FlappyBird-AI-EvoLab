@@ -54,6 +54,9 @@ Pygame renders on a single surface, lacking native support for structural partit
 ## 3. Source Code Architecture
 
 ```text
+## 3. Source Code Architecture
+
+```text
 FlappyBird-AI-EvoLab/
 ├── main.py                  # Entry point — GUI initialization & Multithreading setup
 ├── config.py                # Global system constants & algorithmic hyperparameters
@@ -61,21 +64,29 @@ FlappyBird-AI-EvoLab/
 ├── data_manager.py          # Data I/O — Handles CSV training logs & JSON model persistence
 ├── requirements.txt         # Project dependencies list (NumPy, Matplotlib)
 │
+├── ai/                      # ARTIFICIAL INTELLIGENCE CORE
+│   ├── neural_network.py    # Multi-Layer Perceptron (ReLU/Sigmoid activations)
+│   └── population.py        # Genetic Algorithm — Selection, Crossover, & Mutation
+│
+├── analysis/                # DATA VISUALIZATION & RESEARCH OUTPUTS
+│   ├── data_visualization.ipynb # Jupyter Notebook for generating IEEE research charts
+│   └── *.pdf                # Exported analytical plots (Convergence, Heatmaps)
+│
+├── assets/                  # STATIC ASSETS
+│   └── preview_demo.gif     # Simulation demonstration for documentation
+│
 ├── core/                    # PHYSICS & ENVIRONMENT ENGINE
 │   ├── bird.py              # Agent class — Kinematics & real-time neural inference
 │   ├── pipe.py              # Obstacle class — Dynamic generation & translation
 │   ├── ground.py            # Boundary class — Collision floor rendering
 │   └── collision.py         # AABB (Axis-Aligned Bounding Box) collision logic
 │
-├── ai/                      # ARTIFICIAL INTELLIGENCE CORE
-│   ├── neural_network.py    # Multi-Layer Perceptron (ReLU/Sigmoid activations)
-│   └── population.py        # Genetic Algorithm — Selection, Crossover, & Mutation
+├── data/                    # GENERATED DATA & PERSISTENCE
+│   ├── logs/                # Exported CSV training histories (Fitness, Score tracking)
+│   └── models/              # Saved JSON neural network weights (Champion Brains)
 │
-├── engine/                  # SIMULATION ENGINE
-│   └── game_engine.py       # Core loop decoupling physics steps from UI rendering
-│
-└── assets/                  # STATIC ASSETS
-    └── preview_demo.gif     # Simulation demonstration for documentation
+└── engine/                  # SIMULATION ENGINE
+    └── game_engine.py       # Core loop decoupling physics steps from UI rendering
 ```
 ## Module Specifications
 
